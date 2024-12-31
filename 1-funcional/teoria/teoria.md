@@ -85,6 +85,10 @@ def incrementar(x: Int) : Int = {
 > no es la variable que apunta al dato, la variable si puede cambiar
 > a menos que sea una val y no var
 
+```scala 3
+ val x:Int = 5;//valor inmutable, constante
+ var y:Int = 3; //variable puede cambiar pero el valor inmutable
+```
 
 > Las funciones no cambian sus argumentos recibidos
 
@@ -105,7 +109,39 @@ es decir las funciones se pueden asignar a variables, pasar como argumento de ot
 > ser el retorno de otra 
 
 ``` scala 3
-def functionSqr(x:Int):Int = 
-var sqr : (Int):Int;
+  def cuadrado(x:Int):Int = return x*x;
+  //ASIGNACION a var y val
+  var cuadradoVar = cuadrado;
+  val cuadradoVal = cuadrado;
+  println(cuadradoVal(5));
+
+  //Pasaje como argumento
+  def multiply(x:Int,f:(Int)=>Int):Int = {
+    return x*f(x);
+  } //media rara, pero es para hacer sqr(x)*x= cube
+
+  println(multiply(2,cuadrado));
+}
+
 
 ```
+
+### Beneficios de usar funciones primera clase (o que lo sean)
+
+- ♥ - Permiten **generalizacion** al momento de aplicar funciones
+- ♥ - Permiten tener funciones dentro de tipos de datos, por ejemplo en los hashs o algo asi
+- ♥- Permiten introducir conceptos de paradigma funcional como puedne ser : evaluacion parcial
+ curryng, composicion Y FOS
+
+
+---
+
+## Funciones de Orden Superior (FOS)
+
+> Para que una funcion sea de orden superior debe cumplir alguna ( o ambas) de las siguientes 2 condiciones
+
+> C1: Recibir una funcion como parametro
+
+> C2: Retornar una funcion 
+
+
