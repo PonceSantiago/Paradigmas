@@ -145,3 +145,67 @@ es decir las funciones se pueden asignar a variables, pasar como argumento de ot
 > C2: Retornar una funcion 
 
 
+Ejemplo: 
+
+```scala 3
+//ejemplo, funcion que recorre una lista y filtra por una funcion de condicion
+
+  def esPar(x:Int):Boolean = {
+    return x%2==0;
+  }
+  val l:List[Int] = List(1,2,3,4,5,6,7,8,9,10,11,12,13,14);//lista original
+    //ver pattern matching
+  def filtrarLista(l:List[Int],f:(Int)=>Boolean) : List[Int] =l match {
+    case Nil => List()
+    case (xh::xt) if f(xh) => xh::filtrarLista(xt,f)
+    case (xh::xt) => filtrarLista(xt,f)
+  }
+```
+
+## Composicion de funciones 
+
+Mecanismo  de combinar funciones simples para obtener otras màs cvocmplejas, similar al concepto
+de composicion de funciones de la matematica
+
+el resultado de una funcion se utiliza como argumento de otra
+
+Ejemplo:
+``` scala 3
+def cuadrado(x:Int):Int = {
+return x*x;
+}
+def diferenciaDeCuadrados(x:Int,y:Int):Int={
+return cuadrado(x)-cuadrado(y);
+}
+
+
+o bien
+val resta = (x:Int,y:Int) => x-y;
+def diferenciaDeCuadrados(x:Int,y:Int):Int={
+return resta(cuadrado(x),cuadrado(y));
+}
+
+```
+
+
+## Recursividad
+ 
+En paradigma funcional no hay, o no utilizamos, sentencias de control de flujo. Entonces
+como iteramos??? con recursividad
+
+> LembranÇa algoritmos II: algo recursivo es algo definido en terminos de si mismo, una funcion recursiva lo es
+> cuando estas codificando una funcion recursiva te podes abstraer de la funcion que estas escribiendo
+
+
+> Una funcion recursiva debe tener un caso base, o trivial que asegure la convergencia temporal
+>es importante identificar la naturaleza o el aspecto recursivo de un problema, podemos hacerlo enunciando en voz alta
+>el problema hasta que quede en evidencia o con la forma matematica si la tuviera
+
+> Una funcion recursiva busca resolver un problema reduciendo la complejidad
+> a  pequeños casos del mismo problema
+
+> caso general: es la formula general bajada  al lenguaje de programacion, es el aspecto recursivo del problema
+
+> caso base o trivial: en donde no tenes que pensar ni if ni nadaaaa
+
+
