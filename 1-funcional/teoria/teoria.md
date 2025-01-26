@@ -209,3 +209,255 @@ como iteramos??? con recursividad
 > caso base o trivial: en donde no tenes que pensar ni if ni nadaaaa
 
 
+---
+
+## Listas en scala y programacion funcional
+
+Para ver pattern matching y lazines es importante aprender a utilizar las lisas en scala
+
+>Las listas son muy utilizadas en programacion funcional
+
+> Estan implementadas como **listas enlazadas**
+
+> Cada lista se compone de una **head** y una **tail**
+
+> Son **inmutables**
+
+**head::tail**
+
+![](img/list_1.png)
+
+```scala 3
+val l:List[Int] = List(1,2,3,4,5,6,7);
+l.head; //[1} el primer elemento
+l.tail;// [2,3,4,5,6,7] el resto de la lista
+
+```
+
+### Concatenacion de listas ::: y ++
+
+> En scala concatenamos listas con operador **:::**(recomendado ya que es mas seguro para los tipos solo concatena listas) y ++
+```scala 3
+  var juegosPs1:List[String] = List("Metal Gear:Solid","Rayman:The great escape","Shadow Man");
+  var jugosPs2:List[String] = List("God of war","Gun","Shadow of rome");
+
+  var juegos:List[String] = juegosPs1:::jugosPs2; //concatenacion: los nodos se reutilizan en la nueva lista
+  var jueguitos:List[String]= juegosPs1++jugosPs2; //concatenacion con ++
+
+```
+
+### Agregar elementos
+
+> En scala se agrega elementos ** al inicio ** con operador ::
+
+
+```scala 3
+    var juegosPs1:List[String] = List("Metal Gear:Solid","Rayman:The great escape","Shadow Man");
+    var juegosAgregados:List[String] = "Driver"::juegosPs1;//Agrego juego a lista (lista nueva realmente)
+```
+#### Flatten: funcion que baja un nivel y concatena
+
+```scala 3
+  //FLATTEN (IMPORTANTE) BAJA UN NIVEL Y CONCATENA
+  var matrix:List[List[Int]] = List(List(1,2,3,4),List(14,4),List(1,6,4))
+  println(matrix);
+  println(matrix.flatten);
+```
+
+
+### Pattern matching
+
+> Es un mecanismo que permite validar un valor contra distintos **patrones**
+> si coincide con el patron se puede incluso desarmar el valor en partes
+> es como un switch pero poderoso poderoso poderoso.... pero profundo tambien
+
+```scala 3
+var result = i match //i es lo considerado para el match
+case 1 => "uno"
+case 2 => "Dos"
+case _ => "otro"
+//la expresion te devuelve algo, obvio!!!!
+```
+
+Existen distintos tipos de pattern matching:
+
+-   Por tipo
+-   Por valor
+- Por estructura
+
+```scala 3
+//Pattern Matching
+  println("Pattern matching")
+
+  //pattern matching por tipo, en funcion
+  def typeMatching(t:Any):String = t match {
+    case i:Int => "Entero";
+    case s:String => "String";
+    case b:Boolean => "Boolean";
+    case _ => "Other";
+  }
+
+  println(typeMatching('s'))
+  println(typeMatching(true))
+  println(typeMatching(2))
+
+
+//Pattern matching por valor
+  def valueMatching(v:Int):String = v match{
+    case 0 => "Cero";
+    case 1 => "Uno";
+    case _ => "OTRO";
+  }
+
+  println(valueMatching(1))
+
+  //Pattern matching por estructura
+  def structureMatching(l:List[Int]):String = l match {
+    case Nil => "Lista vacia";
+    case xh::Nil => "Lista un solo elemento";
+    case xh::xt => "Lista mas de un elemento"
+  }
+
+  println(structureMatching(List()))
+  println(structureMatching(List(1)))
+  println(structureMatching(List(2,3,4)))
+```
+### Guards o guardas
+
+son expresiones condicionales complementarios al match, permiten filtrar por casos mas especificos
+van despues del case y antes del =>
+
+```scala 3
+  def sumarPares(l: List[Int]): Int = l match {
+    case Nil => 0;
+    case xh::xt if esPar(xh)=> xh + sumarPares(xt);
+    case xh::xt => sumarPares(xt)
+  }
+```
+
+
+## Laziness pereza zzzzzzzzz
+
+lazy o pereza, todo a su tiempo.
+
+### #1 lazy evaluation
+
+```scala 3
+    if(A==true && B==true) {
+        //si A es false B no se evalua ya que no importa 
+    }
+        if(A==true || B==true) {
+        //si A es true B no se evalua ya que no importta
+    }
+```
+
+---
+## Formas de recibir parametros
+## #1 call by value
+Si quiero el valor lo tengo que evaluar
+> Los parametros se evaluan al momento de ser llamada la funcion, aun si no se utilizan!!!
+```scala 3
+//infinite:si la llamas EXPLOTA
+def infinite():Int = {
+    return 1 + infinite();
+}
+
+def duplicarPrimero(x:Int,y:Int):Int = {
+    return 2*x; //no utiliza el segundo param
+}
+
+duplicarPrimero(2,infinite()); // y=infinite() no se utiliza pero se llama igual
+//call by value (llamada por valor) no se utiliza pero se evalua igual entonces estala
+
+```
+
+## #2 call by name ( o call by reference)
+Esta forma de recibir parametros se llama call by name y es **lazy**(todo a su tiempoo)
+Solo se utiliza el valor del parametro cuando se utiliza, si no se usa no se evalua
+Pero si se usa, **se evalua cada vez que se use** (rendimiento) no explota pero es mas lento....
+
+> sintaxis: y:=>Int
+```scala 3
+def duplicarPrimero(x:Int,y:=>Int):Int = {
+    return 2*x; //no utiliza el segundo param
+}
+```
+
+## #3 Variables Lazy
+
+Esta forma de definir una variable **lazy** permite que solo se evalue el valor de la 
+variable cuando se la use y no al momento de la definicion y que quede cacheado
+entonces no explota ni tenemos el rendimiento malo de evaluar cada vez la variable que se use
+
+
+sintaxis:
+```scala 3
+lazy val inf = infinite(); //variable lazy
+
+```
+
+## #4 Lista lazy y lazylist.....
+
+
+---
+
+## Curryng (Currificacion o evaluacion parcial)
+
+> (Concepto) Evaluacion/Aplicacion parcial:Es el hecho de tomar una funcion de multiples variables y fijarlas (menos una)
+> para obtener una nueva instancia parcialmente aplicada de dicha funcion
+
+
+Ventajas:
+-   Funciones màs **reducidas** y **especificas**, mejora la legibilidad.
+-   Reduce la cantidad de argumentos redundantes o innecesarios.
+-   Puede servir para mejorar la performancia cuando el pasaje de parametros no varia.
+
+
+> Curryng:En matematicas y ciencias de la computacion, curryng es una **tecnica** que consta en traducir o convertir la evaluacion
+> de una funcion que toma multiples argumentos en una **secuencia de funciones** cada una con un solo argumento
+> Ejemplo: tengo una funcion de n argumentos la convierto en una sucesion de n funciones de 1 argumento
+
+
+```scala 3
+def suma(n1:Int,n2:Int):Int = n1+n2;
+def sumaCurried(n1:Int)=>(n2:Int)=>n1+n2;//rayo currificador manual
+val summaCurried = suma.curried;//rayo curriicador autmatico
+
+sumaCurried(3)(2);//3+2
+```
+
+nota que la funcion que se devuelve utiliza la variable del ambito de laotra closure???
+
+
+### Map, Filter, Reduce, For each,GroupBy etc. metodos importantes de **colecciones**
+
+> Map y Filter: Son metodos de colecciones. Ambas FOS, reciben funciones como parametros.
+
+-   **Map**:Aplica a cada elemento de la coleccion la funcion pasada por parametro, te devuelve una **nueva lista transformada**.
+
+``` scala 3
+    val numeros:List[Int] = List(2,3,4,5,6,7,3,4,556,32,4);
+    val numerosElevados:List[Int] = numeros.map((x:Int)=>x*x); //retorna una nueva lista con los numeros elevados al cuadrado
+```
+-   **Filter**:Recibe una funcion como parametro que evalua una condicion o criterio a cada elemento de la lista, devuelve una **nueva lista**
+    con los elementos que cumplen el criterio(una funcion (x):Boolean)
+
+``` scala 3
+    val numeros:List[Int] = List(2,3,4,5,6,7,3,4,556,32,4);
+    val numerosPares:List[Int] = numeros.filter((x:Int)=>x%2==0); //retorna una nueva lista con los numeros pares
+```
+- **Group By**:Es un metodo que le aplicas a una coleccion, en donde le pasas una funcion anonima o no que te va a devolves
+- la clave por la que agrupar, ejemplo si tenes una coleccion de nombres la funcion podria ser la que te devuelva la longitud
+- de la cadena, entonces agrupas por longitud de nombres, si tenes otro objeto ejemplo una persona, la funcion podria ser
+- la que te devuelve el nombre, o la eda do el peso o su comida favorita etc. Te devuelve un MAPA
+
+``` scala 3
+  //Group by
+  val novias:List[String] = List("Angeles","Camila","Aimara","Rocio")
+  var mapa = novias.groupBy((nombre:String)=>nombre.length) //la key es el criterio, la funcion anonima devuelve el criterio que es la key
+  
+  [7,(Angeles)] [6,(camila,aimara)] [5,(rocio)] //devuelve un mapa con la clave que elegimos y los valores son colecciones que coinciden en la clave
+```
+
+
+    
