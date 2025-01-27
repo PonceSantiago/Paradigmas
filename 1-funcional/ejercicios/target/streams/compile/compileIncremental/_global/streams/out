@@ -1,0 +1,30 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 3 products, 1 sources, 2 libraries
+[debug] current source = Set(${BASE}/src/main/scala/ejercicios.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/ejercicios.scala), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] 
+[debug] Initial source changes:
+[debug] 	removed: Set()
+[debug] 	added: Set()
+[debug] 	modified: Set(${BASE}/src/main/scala/ejercicios.scala)
+[debug] Invalidated products: Set()
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set(ejercicios$package, ejercicios)
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set()
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] all 1 sources are invalidated
+[debug] Initial set of included nodes: ejercicios$package, ejercicios
+[debug] Recompiling all sources: number of invalidated sources > 50.0 percent of all sources
+[debug] compilation cycle 1
+[info] compiling 1 Scala source to /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes ...
+[debug] Returning already retrieved and compiled bridge: /home/santiago/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.3.4/scala3-sbt-bridge-3.3.4.jar.
+[debug] [zinc] Running cached compiler 2f69905f for Scala Compiler version 3.3.4
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-classpath
+[debug] 	/home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes:/home/santiago/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.4/scala3-library_3-3.3.4.jar:/home/santiago/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar
+[debug] Scala compilation took 3.540828198 s
+[info] done compiling

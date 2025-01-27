@@ -1,0 +1,23 @@
+[debug] Created transactional ClassFileManager with tempDir = /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes.bak
+[debug] About to delete class files:
+[debug] 	ejercicios$package.class
+[debug] 	ejercicios.class
+[debug] 	ejercicios$package$.class
+[debug] 	ejercicios$package.tasty
+[debug] 	ejercicios.tasty
+[debug] 	ejercicios$package$.tasty
+[debug] We backup class files:
+[debug] 	ejercicios$package.class
+[debug] 	ejercicios.class
+[debug] 	ejercicios$package$.class
+[debug] 	ejercicios$package.tasty
+[debug] 	ejercicios.tasty
+[debug] 	ejercicios$package$.tasty
+[debug] Registering generated classes:
+[debug] 	ejercicios$package.class
+[debug] 	ejercicios.class
+[debug] 	ejercicios$package$.class
+[debug] 	ejercicios$package.tasty
+[debug] 	ejercicios.tasty
+[debug] 	ejercicios$package$.tasty
+[debug] Removing the temporary directory used for backing up class files: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes.bak

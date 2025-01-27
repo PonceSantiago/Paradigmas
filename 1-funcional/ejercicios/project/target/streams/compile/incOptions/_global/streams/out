@@ -1,0 +1,5 @@
+[debug] Created transactional ClassFileManager with tempDir = /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project/target/scala-2.12/sbt-1.0/classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Created transactional ClassFileManager with tempDir = /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project/target/scala-2.12/sbt-1.0/classes.bak
+[debug] Removing the temporary directory used for backing up class files: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project/target/scala-2.12/sbt-1.0/classes.bak

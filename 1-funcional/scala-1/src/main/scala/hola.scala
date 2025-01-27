@@ -174,5 +174,29 @@ def hola():Unit = {
 
   var mapa = novias.groupBy((nombre:String)=>nombre.length) //la key es el criterio, la funcion anonima devuelve el criterio que es la key
   println(mapa)
+
+  //VECTOR
+  var mascotas: Vector[String] = Vector("perro", "gato", "pato");
+  var salvajes: Vector[String] = Vector("Leon", "Puma", "Elefante");
+
+  //Direccionamiento: con () y no con []como es habitual en todos los lenguajes
+  println(salvajes(0)); //Leon
+  //Concatenacion
+  val animales = mascotas ++ salvajes;
+  println(animales)
+  //Insercion al final
+  val salvajesExtendido = salvajes :+ "Hipopotamo"
+
+  println(salvajes)
+  println(salvajesExtendido)
+
+  //MAPA
+  var cumpleaños:Map[String,String] = Map("Barbi"->"09-04-1994","Santiago"->"29-09-1996")
+  println(cumpleaños)
+  println(cumpleaños.get("Santiago"))
+  cumpleaños = cumpleaños + ("Pepo"->"31-01-99")
+  println(cumpleaños)
+
+
 }
 

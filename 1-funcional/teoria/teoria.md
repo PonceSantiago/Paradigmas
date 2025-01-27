@@ -459,5 +459,40 @@ nota que la funcion que se devuelve utiliza la variable del ambito de laotra clo
   [7,(Angeles)] [6,(camila,aimara)] [5,(rocio)] //devuelve un mapa con la clave que elegimos y los valores son colecciones que coinciden en la clave
 ```
 
+- **Reduce**: El metodo reduce toma una funcion (ppuede ser anonima) y aplica esa funcion a elementos
+- sucesivos en la lista. y retorna un valor que luego se usa como un parametro de la misma funcion, es raro. Mirà, reduce la colecciona un valorrr
 
+``` scala 3
+    val numeros:List[Int] = List(2,3,45,6,7,9,23,12);
+    def add(x:Int,y:Int):Int = x+y;
     
+    numeros.reduce(add); //97
+    //2,3,45,6,7,9,23,12
+    //add(2,3) = 5 -> add(5,45)=50 -> add(50,6)=56 -> add(56,7)=63 -> add(63,9)=72> add(72,23)=95 -> add(95,12)=107
+```
+
+
+---
+
+## Otras estructuras de datos
+
+### Vectores
+
+Sintaxis
+```scala 3
+    //declaracion
+    var mascotas:Vector[String] = Vector("perro","gato","pato");
+    var salvajes:Vector[String] = Vector("Leon","Puma","Elefante");
+    
+    //Direccionamiento: con () y no con []como es habitual en todos los lenguajes
+    salvajes(0); //Leon
+    //Concatenacion
+    val animales = mascotas++salvajes;
+    
+    //insercion al final
+    val salvajesExtendido = salvajes :+ "Hipopotamo"
+    
+```
+
+
+### Mapas
