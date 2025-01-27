@@ -256,7 +256,16 @@ Las interfaces **formalizan** el polimorfismo ya que permiten definir polimorfis
 
 ![esencial.jpg](img/esencial.jpg)
 
->Lo esencial del polimorfismo es que **rompe con la tipica vinculacion temprana**
+>Lo esencial del polimorfismo es que **rompe con la tipica vinculacion temprana** de los lenguajes compilados
+> que vinculan en tiempo de compilacion la llamada a un subprograma con la direccion absoluta de este
 
 ---
+
+### Clases abstracas(no instanciables)
+
+Son clases que no admiten instancia: se utilizan para agrupar otras clases generalmente.
+Pueden ser abstractas porque tienen metodos abstractos (a implementar por las subclases)
+o bien por declararlas como tales
+
+
 
