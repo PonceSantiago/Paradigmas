@@ -264,8 +264,40 @@ Las interfaces **formalizan** el polimorfismo ya que permiten definir polimorfis
 ### Clases abstracas(no instanciables)
 
 Son clases que no admiten instancia: se utilizan para agrupar otras clases generalmente.
+Se utilizan para declarar metodos y atributos comunes a las subclases
 Pueden ser abstractas porque tienen metodos abstractos (a implementar por las subclases)
 o bien por declararlas como tales
 
+> Si tenes atributos comunes entonces considerar usar abstracas, sino interfaz
 
 
+
+
+
+
+---
+## Documentacion
+
+> _Lo importante es la disponibilidad de la documentacion que se neceista en el momento en el que se la necesita
+> . El mantenimiento tambien debe llegar a la documentacion. La documentacion para desarrolladores a menudo se denomina **modelo**_
+
+
+Fases a documentar (todas)
+-   Requerimientos
+- Analisis
+- Diseño
+- Programacion
+- Pruebas
+
+
+> Importante: Al igual que si hicieramos un edificio necesitamos diferentes tipos de diagrama para los distintos tipos de usuarios
+
+
+### Diagramas UML (Unified modeling languaje)
+
+- Diagrama de clases: Relaciones entre clases e interfaces
+- Diagrama de caso de uso:Representan funciones de un **sistema** desde el punto de vista del **usuario**
+- Diagrama de secuencia: Son una representacion temporal de los **objetos** y sus interfaces
+- Diagrama de flujo
+- Diagrama de despliegue
+- Diagrama de estados y transiciones
