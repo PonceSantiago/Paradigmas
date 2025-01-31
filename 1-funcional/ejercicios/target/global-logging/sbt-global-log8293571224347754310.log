@@ -1,0 +1,88 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.10.7 (Oracle Corporation Java 23)
+[debug] Load.defaultLoad until apply took 424.26553ms
+[debug]           Load.loadUnit: plugins took 385.836552ms
+[debug]           Load.loadUnit: defsScala took 0.644351ms
+[debug] [Loading] Scanning directory /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 284.038152 ms
+[debug]               Load.resolveProject(ejercicios-build) took 506.526095ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id ejercicios-build, base: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project, plugins: List(<none>))) took 1089.158767ms
+[debug] [Loading] Done in /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project, returning: (ejercicios-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 1391.990438ms
+[debug]           Load.loadUnit: cleanEvalClasses took 5.387517ms
+[debug]         Load.loadUnit(file:/home/santiago/Documents/FIUBA/75-Computación/Algoritmos%20y%20Programacion%20III/Paradigmas/1-funcional/ejercicios/project/, ...) took 1840.62999ms
+[debug]       Load.apply: load took 3868.475974ms
+[debug]       Load.apply: resolveProjects took 65.606945ms
+[debug]       Load.apply: finalTransforms took 743.941242ms
+[debug]       Load.apply: config.delegates took 117.658251ms
+[debug]       Load.apply: Def.make(settings)... took 4037.190495ms
+[debug]       Load.apply: structureIndex took 1168.81081ms
+[debug]       Load.apply: mkStreams took 12.100074ms
+[info] loading project definition from /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 17927.960593ms
+[debug]     Load.loadUnit: defsScala took 0.026177ms
+[debug] [Loading] Scanning directory /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios
+[debug]       Load.loadUnit: mkEval took 54.775663ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 12.136926 ms
+[info] loading settings for project root from build.sbt...
+[debug]         Load.resolveProject(root) took 12.572605ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios, plugins: List(<none>))) took 37.585045ms
+[debug] [Loading] Done in /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 933.748237ms
+[debug]     Load.loadUnit: cleanEvalClasses took 14.94935ms
+[debug]   Load.loadUnit(file:/home/santiago/Documents/FIUBA/75-Computación/Algoritmos%20y%20Programacion%20III/Paradigmas/1-funcional/ejercicios/, ...) took 18896.491746ms
+[debug] Load.apply: load took 19060.992134ms
+[debug] Load.apply: resolveProjects took 5.781592ms
+[debug] Load.apply: finalTransforms took 250.057863ms
+[debug] Load.apply: config.delegates took 9.397774ms
+[debug] Load.apply: Def.make(settings)... took 870.400296ms
+[debug] Load.apply: structureIndex took 338.582369ms
+[debug] Load.apply: mkStreams took 0.005215ms
+[info] set current project to ejercicios (in build file:/home/santiago/Documents/FIUBA/75-Computación/Algoritmos%20y%20Programacion%20III/Paradigmas/1-funcional/ejercicios/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(~run, None, None)
+[info] sbt server started at local:///home/santiago/.sbt/1.0/server/2e914553c7d5d54c950e/sock
+[debug] Writing bsp connection file
+[info] started sbt server

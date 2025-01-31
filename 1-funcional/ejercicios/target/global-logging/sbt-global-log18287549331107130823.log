@@ -1,0 +1,23 @@
+[debug] > Exec(__runWatch console0, Some(e2a8eeda-435c-43e8-86c7-604792e1f593), Some(CommandSource(console0)))
+[debug] > Exec(sbtStashOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__preWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(run, None, Some(CommandSource(console0)))
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes ...
+[error] -- [E008] Not Found Error: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/src/main/scala/ejercicios.scala:53:71 
+[error] 53 |  println(l2.groupBy((x:Int)=>x).values.toList.sortBy((l:List[Int])=>l.len))
+[error]    |                                                                     ^^^^^
+[error]    |                                  value len is not a member of List[Int]
+[error] -- [E172] Type Error: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/src/main/scala/ejercicios.scala:53:75 
+[error] 53 |  println(l2.groupBy((x:Int)=>x).values.toList.sortBy((l:List[Int])=>l.len))
+[error]    |                                                                           ^
+[error]    |Ambiguous given instances: both object String in object Ordering and object DeprecatedFloatOrdering in object Ordering match type Ordering[B] of parameter ord of method sortBy in trait SeqOps
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 2 s, completed Jan 28, 2025, 5:51:07 PM
+[debug] > Exec(resumeFromFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(sbtPopOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__postWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(__waitWatch console0, None, None)

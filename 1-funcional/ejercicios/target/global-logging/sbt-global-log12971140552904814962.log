@@ -1,0 +1,21 @@
+[debug] > Exec(__runWatch console0, Some(2b23cb7e-117b-4132-b536-56eb9b324e1b), Some(CommandSource(console0)))
+[debug] > Exec(sbtStashOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__preWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(run, None, Some(CommandSource(console0)))
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes ...
+[error] -- [E006] Not Found Error: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/src/main/scala/ejercicios.scala:111:4 
+[error] 111 |    cas
+[error]     |    ^^^
+[error]     |    Not found: cas - did you mean caps?
+[error]     |
+[error]     | longer explanation available when compiling with `-explain`
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 2 s, completed Jan 31, 2025, 12:23:19 AM
+[debug] > Exec(resumeFromFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(sbtPopOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__postWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(__waitWatch console0, None, None)

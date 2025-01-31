@@ -1,0 +1,14 @@
+[debug] > Exec(__runWatch console0, Some(b24b0e15-670f-4a14-b188-cb82e39538a6), Some(CommandSource(console0)))
+[debug] > Exec(sbtStashOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__preWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(run, None, Some(CommandSource(console0)))
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes ...
+[info] done compiling
+[success] Total time: 2 s, completed Jan 28, 2025, 7:30:30 PM
+[debug] > Exec(resumeFromFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(sbtPopOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__postWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(__waitWatch console0, None, None)

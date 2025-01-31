@@ -1,0 +1,23 @@
+[debug] > Exec(__runWatch console0, Some(4acba18c-103a-4bc7-800a-d95ba41fc135), Some(CommandSource(console0)))
+[debug] > Exec(sbtStashOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__preWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(run, None, Some(CommandSource(console0)))
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes ...
+[warn] -- [E029] Pattern Match Exhaustivity Warning: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/src/main/scala/ejercicios.scala:89:29 
+[warn] 89 |  def max(l:List[Int]):Int = l match {
+[warn]    |                             ^
+[warn]    |                      match may not be exhaustive.
+[warn]    |
+[warn]    |                      It would fail on pattern case: List(_, _, _*), Nil
+[warn]    |
+[warn]    | longer explanation available when compiling with `-explain`
+[warn] one warning found
+[info] done compiling
+[success] Total time: 5 s, completed Jan 29, 2025, 3:39:55 PM
+[debug] > Exec(resumeFromFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(sbtPopOnFailure, None, Some(CommandSource(console0)))
+[debug] > Exec(__postWatch console0, None, Some(CommandSource(console0)))
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(__waitWatch console0, None, None)

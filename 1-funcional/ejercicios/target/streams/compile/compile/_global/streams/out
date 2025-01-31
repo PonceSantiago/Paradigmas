@@ -1,3 +1,9 @@
-[error] '/home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/target/scala-3.3.4/classes' does not exist or is not a directory or .jar file
-[info]   scalac -help  gives more information
-[error] one error found
+[warn] -- [E029] Pattern Match Exhaustivity Warning: /home/santiago/Documents/FIUBA/75-Computación/Algoritmos y Programacion III/Paradigmas/1-funcional/ejercicios/src/main/scala/ejercicios.scala:88:29 
+[warn] 88 |  def max(l:List[Int]):Int = l match {
+[warn]    |                             ^
+[warn]    |                             match may not be exhaustive.
+[warn]    |
+[warn]    |                             It would fail on pattern case: Nil
+[warn]    |
+[warn]    | longer explanation available when compiling with `-explain`
+[warn] one warning found
